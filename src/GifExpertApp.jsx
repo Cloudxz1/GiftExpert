@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { AddCategory } from "./components/AddCategory";
-import { GifGrid } from "./components/GifGrid";
+import { AddCategory, GifGrid } from "./components";
+
 
 export const GifExpertApp = () => {
 
-    const [categories, setCategories] = useState(['One punch']);
+    const [categories, setCategories] = useState([' ']);
 
     // Agregar una nueva categoria
     const onAddCategory = ( newCategory ) => {
@@ -27,8 +27,8 @@ export const GifExpertApp = () => {
             
             {
                 categories.map(category =>(
-                <GifGrid key ={category} 
-                category={ category }
+                <GifGrid key ={ category } 
+                    category ={ category }
                 />))
             }
             
